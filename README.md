@@ -22,4 +22,20 @@ Una vez se corre
 vagrant up
 ~~~
 
+Se debe configurar ngrok
+~~~
+ngrok config add-authtoken user-token
+~~~
+
+Donde el user-token se le da a cada usuario que se logea en ngrok
+
+por último con
+~~~
+ngrok http 4440
+~~~
+
+y se obtiene la url que redirecciona el servicio de Rundeck que se está corriendo en la máquina de ubuntu/bionic64
+~~~
+ngrok                                                                                                   (Ctrl+C to quit)                                                                                                                        Announcing ngrok-go: The ngrok agent as a Go library: https://ngrok.com/go                                                                                                                                                                      Session Status                online                                                                                    Account                       harrihoyos2680@gmail.com (Plan: Free)                                                     Version                       3.3.1                                                                                     Region                        United States (us)                                                                        Latency                       105ms                                                                                     Web Interface                 http://127.0.0.1:4040                                                                     Forwarding                    https://1672-191-95-170-65.ngrok-free.app -> http://localhost:4440                                                                                                                                                Connections                   ttl     opn     rt1     rt5     p50     p90                                                                             0       0       0.00    0.00    0.00    0.00                                                                                                                               
+~~~
 <img width="960" alt="image" src="https://github.com/Wiz80/practica-vagrant-rundeck-i2ds-devops/assets/50804224/010bda92-2b6c-4c65-8728-78fc89156397">
